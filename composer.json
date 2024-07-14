@@ -1,0 +1,49 @@
+{
+    "name": "axetools/bitflagtrait",
+    "description": "A PHP trait to enable bitwise comparison of flags",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "bitwise",
+        "comparison",
+        "trait",
+        "flag",
+        "flags",
+        "class",
+        "classes"
+    ],
+    "autoload": {
+        "psr-4": {
+            "AxeTools\\Traits\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ryan W Howe",
+            "email": "axetoolsphp@gmail.com"
+        }
+    ],
+    "autoload-dev": {
+        "psr-4": {
+            "AxeTools\\Traits\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": "^5.6 || ^7.0"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "scripts": {
+        "phpunit": "phpunit --verbose --colors=always",
+        "tests": [
+            "@phpunit"
+        ]
+    },
+    "scripts-descriptions": {
+        "phpunit": "Run PHPUnit tests",
+        "tests": "Run the static analysis and unit tests"
+    }
+}
