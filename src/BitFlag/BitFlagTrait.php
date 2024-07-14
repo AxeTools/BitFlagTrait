@@ -2,6 +2,8 @@
 
 namespace AxeTools\Traits\BitFlag;
 
+use AxeTools\Traits\Tests\BitFlagTraitTest;
+
 /**
  * Use the bitwise operators to set, get and toggle to the state of a given flag in a set of flags.  Using
  * bitwise flags are a method to set true/false states for a set of distinct statuses that are contained in an integer value
@@ -43,6 +45,10 @@ namespace AxeTools\Traits\BitFlag;
  * const FLAG_SHIPPED  = 0b10000;
  *
  * </pre>
+ *
+ * @package AxeTools\BitFlagTrait
+ * @since 1.0.0
+ * @see BitFlagTraitTest
  */
 trait BitFlagTrait {
 
@@ -53,6 +59,7 @@ trait BitFlagTrait {
      * @param int $flag The individual flag to set in the flag set
      *
      * @return bool The set value in the flag set of the flag
+     * @since 1.0.0
      */
     protected static function getFlag($flagSet, $flag) {
         return ($flagSet & $flag) === $flag;
@@ -65,7 +72,8 @@ trait BitFlagTrait {
      * @param int  $flag The individual flag to set in the flag set
      * @param bool $value The value to update the flag position in the flag set
      *
-     * @return bool The set value of the flag once set
+     * @return void
+     * @since 1.0.0
      */
     protected static function setFlag(&$flagSet, $flag, $value) {
         if ($value) {
@@ -73,8 +81,6 @@ trait BitFlagTrait {
         } else {
             $flagSet &= ~$flag;
         }
-
-        return self::getFlag($flagSet, $flag);
     }
 
     /**
@@ -83,11 +89,11 @@ trait BitFlagTrait {
      * @param int $flagSet The current state of the flag set
      * @param int $flag The individual flag to set in the flag set
      *
-     * @return bool The state of the flat once toggled
+     * @return void
+     * @since 1.0.0
      */
     protected static function toggleFlag(&$flagSet, $flag) {
         $flagSet ^= $flag;
-        return self::getFlag($flagSet, $flag);
     }
 
 }
