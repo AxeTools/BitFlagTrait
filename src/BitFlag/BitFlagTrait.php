@@ -53,7 +53,7 @@ use AxeTools\Traits\Tests\BitFlagTraitTest;
 trait BitFlagTrait {
 
     /**
-     * Get the current set status of the flag that is requested from the flagSet
+     * Return the current set status of the flag that is requested from the flagSet
      *
      * @param int $flagSet The current state of the flag set
      * @param int $flag The individual flag to set in the flag set
@@ -61,7 +61,7 @@ trait BitFlagTrait {
      * @return bool The set value in the flag set of the flag
      * @since 1.0.0
      */
-    protected static function getFlag($flagSet, $flag) {
+    protected static function hasFlag($flagSet, $flag) {
         return ($flagSet & $flag) === $flag;
     }
 

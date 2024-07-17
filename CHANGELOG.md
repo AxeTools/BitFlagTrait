@@ -5,13 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog]
 and this project adheres to [Semantic Versioning].
 
-## 1.0.0
+## 1.0.0 - 2024-07-17
 
 ### Added
 
 - Initial Release 1.0.0
 - Support for php ^5.6 || ^7.0
-- `CacheTrait::getFlag()` static method
+- `CacheTrait::hasFlag()` static method
 - `CacheTrait::setFlag()` static method
 - `CacheTrait::toggleFlag()` static method
 

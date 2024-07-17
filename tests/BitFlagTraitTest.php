@@ -10,7 +10,7 @@ class BitFlagTraitTest extends TestCase {
 
     /**
      * @test
-     * @dataProvider setFlagsDataProvider
+     * @dataProvider setFlagDataProvider
      *
      * @param int  $flagSet
      * @param int  $flag
@@ -20,12 +20,12 @@ class BitFlagTraitTest extends TestCase {
      */
     public function setFlagTest($flagSet, $flag, $expected) {
         self::setFlag($flagSet, $flag, $expected);
-        $this->assertEquals($expected, self::getFlag($flagSet, $flag));
+        $this->assertEquals($expected, self::hasFlag($flagSet, $flag));
     }
 
     /**
      * @test
-     * @dataProvider getFlagsDataProvider
+     * @dataProvider hasFlagDataProvider
      *
      * @param int  $flagSet
      * @param int  $flag
@@ -33,8 +33,8 @@ class BitFlagTraitTest extends TestCase {
      *
      * @return void
      */
-    public function getFlagTest($flagSet, $flag, $expected) {
-        $this->assertEquals($expected, self::getFlag($flagSet, $flag));
+    public function hasFlagTest($flagSet, $flag, $expected) {
+        $this->assertEquals($expected, self::hasFlag($flagSet, $flag));
     }
 
     /**
@@ -49,7 +49,7 @@ class BitFlagTraitTest extends TestCase {
      */
     public function toggleFlagTest($flagSet, $flag, $expected) {
         self::toggleFlag($flagSet, $flag);
-        $this->assertEquals($expected, self::getFlag($flagSet, $flag));
+        $this->assertEquals($expected, self::hasFlag($flagSet, $flag));
     }
 
     public static function toggleFlagDataProvider() {
@@ -80,7 +80,7 @@ class BitFlagTraitTest extends TestCase {
         ];
     }
 
-    public static function getFlagsDataProvider() {
+    public static function hasFlagDataProvider() {
         return [
             'Initial unset state to 0, first bit false' => [0b00000000, 0b00000001, false],
             'Initial unset state to 1, first bit false' => [0b00000001, 0b00000001, true],
@@ -108,7 +108,7 @@ class BitFlagTraitTest extends TestCase {
         ];
     }
 
-    public static function setFlagsDataProvider() {
+    public static function setFlagDataProvider() {
         return [
             'Initial unset state to 0, first bit true' => [0b00000000, 0b00000001, true],
             'Initial unset state to 0, first bit false' => [0b00000000, 0b00000001, false],

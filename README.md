@@ -51,7 +51,7 @@ class ShippingStatus {
     }
     
     public function hasShipped(){
-        return self::getFlag($this->status, self::FLAG_SHIPPED);
+        return self::hasFlag($this->status, self::FLAG_SHIPPED);
     }
 }
 
@@ -66,13 +66,13 @@ var_dump($orderStatus->hasShipped()); // true
 
 ```
 
-## getFlag()
+## hasFlag()
 
-The `self::getFlag()` static method to determine the current boolean value of a specific flag in the flagSet integer.
+The `self::hasFlag()` static method to determine the current boolean value of a specific flag in the flagSet integer.
 
 #### Description
 ```php
-self::getFlag(int $flagSet, int $flag): bool
+self::hasFlag(int $flagSet, int $flag): bool
 ```
 
 #### Parameters
