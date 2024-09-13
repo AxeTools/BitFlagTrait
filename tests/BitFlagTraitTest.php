@@ -12,13 +12,13 @@ class BitFlagTraitTest extends TestCase {
      * @test
      * @dataProvider setFlagDataProvider
      *
-     * @param int  $flagSet
-     * @param int  $flag
+     * @param int $flagSet
+     * @param int $flag
      * @param bool $expected
      *
      * @return void
      */
-    public function setFlagTest($flagSet, $flag, $expected) {
+    public function setFlagTest(int $flagSet, int $flag, bool $expected) {
         self::setFlag($flagSet, $flag, $expected);
         $this->assertEquals($expected, self::hasFlag($flagSet, $flag));
     }
@@ -27,13 +27,13 @@ class BitFlagTraitTest extends TestCase {
      * @test
      * @dataProvider hasFlagDataProvider
      *
-     * @param int  $flagSet
-     * @param int  $flag
+     * @param int $flagSet
+     * @param int $flag
      * @param bool $expected
      *
      * @return void
      */
-    public function hasFlagTest($flagSet, $flag, $expected) {
+    public function hasFlagTest(int $flagSet, int $flag, bool $expected) {
         $this->assertEquals($expected, self::hasFlag($flagSet, $flag));
     }
 
@@ -41,18 +41,21 @@ class BitFlagTraitTest extends TestCase {
      * @test
      * @dataProvider toggleFlagDataProvider
      *
-     * @param int  $flagSet
-     * @param int  $flag
+     * @param int $flagSet
+     * @param int $flag
      * @param bool $expected
      *
      * @return void
      */
-    public function toggleFlagTest($flagSet, $flag, $expected) {
+    public function toggleFlagTest(int $flagSet, int $flag, bool $expected) {
         self::toggleFlag($flagSet, $flag);
         $this->assertEquals($expected, self::hasFlag($flagSet, $flag));
     }
 
-    public static function toggleFlagDataProvider() {
+    /**
+     * @return array[mixed]
+     */
+    public static function toggleFlagDataProvider(): array {
         return [
             'Initial unset state to 0, first bit false' => [0b00000000, 0b00000001, true],
             'Initial unset state to 1, first bit false' => [0b00000001, 0b00000001, false],
@@ -80,7 +83,10 @@ class BitFlagTraitTest extends TestCase {
         ];
     }
 
-    public static function hasFlagDataProvider() {
+    /**
+     * @return array[mixed]
+     */
+    public static function hasFlagDataProvider(): array {
         return [
             'Initial unset state to 0, first bit false' => [0b00000000, 0b00000001, false],
             'Initial unset state to 1, first bit false' => [0b00000001, 0b00000001, true],
@@ -108,7 +114,10 @@ class BitFlagTraitTest extends TestCase {
         ];
     }
 
-    public static function setFlagDataProvider() {
+    /**
+     * @return array[mixed]
+     */
+    public static function setFlagDataProvider(): array {
         return [
             'Initial unset state to 0, first bit true' => [0b00000000, 0b00000001, true],
             'Initial unset state to 0, first bit false' => [0b00000000, 0b00000001, false],

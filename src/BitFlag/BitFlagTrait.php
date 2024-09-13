@@ -61,21 +61,21 @@ trait BitFlagTrait {
      * @return bool The set value in the flag set of the flag
      * @since 1.0.0
      */
-    protected static function hasFlag($flagSet, $flag) {
+    protected static function hasFlag(int $flagSet, int $flag): bool {
         return ($flagSet & $flag) === $flag;
     }
 
     /**
      * Set the flag to the specified value in the flag set
      *
-     * @param int  $flagSet The current state of the flag set
-     * @param int  $flag The individual flag to set in the flag set
+     * @param int $flagSet The current state of the flag set
+     * @param int $flag The individual flag to set in the flag set
      * @param bool $value The value to update the flag position in the flag set
      *
      * @return void
      * @since 1.0.0
      */
-    protected static function setFlag(&$flagSet, $flag, $value) {
+    protected static function setFlag(int &$flagSet, int $flag, bool $value) {
         if ($value) {
             $flagSet |= $flag;
         } else {
@@ -92,7 +92,7 @@ trait BitFlagTrait {
      * @return void
      * @since 1.0.0
      */
-    protected static function toggleFlag(&$flagSet, $flag) {
+    protected static function toggleFlag(int &$flagSet, int $flag) {
         $flagSet ^= $flag;
     }
 

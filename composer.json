@@ -32,16 +32,22 @@
         }
     },
     "require": {
-        "php": "^5.6 || ^7.0"
+        "php": "^7.1"
     },
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require-dev": {
-        "phpunit/phpunit": "*"
+        "phpunit/phpunit": "*",
+        "phpstan/phpstan": "^1.4",
+        "vimeo/psalm": "^4.30"
     },
     "scripts": {
         "phpunit": "phpunit --verbose --colors=always",
+        "psalm": "psalm",
+        "phpstan": "phpstan analyse src/ tests/ --no-progress --memory-limit=1G --level 7",
         "tests": [
+            "@phpstan",
+            "@psalm",
             "@phpunit"
         ]
     },
