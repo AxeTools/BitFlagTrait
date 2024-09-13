@@ -53,7 +53,7 @@ class BitFlagTraitTest extends TestCase {
     }
 
     /**
-     * @return array[mixed]
+     * @return array<mixed>
      */
     public static function toggleFlagDataProvider(): array {
         return [
@@ -84,7 +84,7 @@ class BitFlagTraitTest extends TestCase {
     }
 
     /**
-     * @return array[mixed]
+     * @return array<mixed>
      */
     public static function hasFlagDataProvider(): array {
         return [
@@ -115,7 +115,7 @@ class BitFlagTraitTest extends TestCase {
     }
 
     /**
-     * @return array[mixed]
+     * @return array<mixed>
      */
     public static function setFlagDataProvider(): array {
         return [

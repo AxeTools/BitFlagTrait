@@ -7,9 +7,10 @@
 <p align="center">
     <a href="https://github.com/AxeTools/BitFlagTrait"><img src="https://img.shields.io/badge/source-AxeTools/BitFlagTrait-blue.svg?style=flat-square" alt="Source Code"></a>
     <a href="https://php.net"><img src="https://img.shields.io/packagist/php-v/AxeTools/BitFlagTrait.svg?style=flat-square&colorB=%238892BF" alt="PHP Programming Language"></a>
-    <a href="https://github.com/AxeTools/BitFlagTrait/blob/1.x/LICENSE"><img src="https://img.shields.
+    <a href="https://github.com/AxeTools/BitFlagTrait/blob/2.x/LICENSE"><img src="https://img.shields.
 io/packagist/l/AxeTools/BitFlagTrait.svg?style=flat-square&colorB=darkcyan" alt="Read License"></a>
-    <a href="https://github.com/AxeTools/BitFlagTrait/actions/workflows/php.yml"><img src="https://img.shields.io/github/actions/workflow/status/AxeTools/BitFlagTrait/php.yml?branch=1.x&logo=github&style=flat-square" alt="Build Status"></a>
+    <a href="https://github.com/AxeTools/BitFlagTrait/actions/workflows/php.yml"><img src="https://img.shields.
+io/github/actions/workflow/status/AxeTools/BitFlagTrait/php.yml?branch=2.x&logo=github&style=flat-square" alt="Build Status"></a>
 </p>
 
 This project uses [Semantic Versioning][].

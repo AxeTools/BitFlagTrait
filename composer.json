@@ -44,7 +44,7 @@
     "scripts": {
         "phpunit": "phpunit --verbose --colors=always",
         "psalm": "psalm",
-        "phpstan": "phpstan analyse src/ tests/ --no-progress --memory-limit=1G --level 7",
+        "phpstan": "phpstan analyse src/ tests/ --no-progress --memory-limit=1G --level 8",
         "tests": [
             "@phpstan",
             "@psalm",
