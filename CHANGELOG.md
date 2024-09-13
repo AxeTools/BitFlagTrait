@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning].
 
 ### Changed
 
-- Support for php ^7.1
+- Support for php ^7.1 || ^8.0
 - `CacheTrait::hasFlag()` inputs and return are typed
 - `CacheTrait::setFlag()` inputs are typed
 - `CacheTrait::toggleFlag()` inputs are typed
