@@ -39,7 +39,7 @@
     "require-dev": {
         "phpunit/phpunit": "*",
         "phpstan/phpstan": "*",
-        "psalm/phar": "^5.26"
+        "psalm/phar": "*"
     },
     "scripts": {
         "phpunit": "phpunit --colors=always",
