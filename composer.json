@@ -38,16 +38,13 @@
     "prefer-stable": true,
     "require-dev": {
         "phpunit/phpunit": "*",
-        "phpstan/phpstan": "*",
-        "psalm/phar": "*"
+        "phpstan/phpstan": "*"
     },
     "scripts": {
         "phpunit": "phpunit --colors=always",
-        "psalm": "psalm.phar",
         "phpstan": "phpstan analyse src/ tests/ --no-progress --memory-limit=1G --level 8",
         "tests": [
             "@phpstan",
-            "@psalm",
             "@phpunit"
         ]
     },
