@@ -39,11 +39,11 @@
     "require-dev": {
         "phpunit/phpunit": "*",
         "phpstan/phpstan": "*",
-        "vimeo/psalm": "*"
+        "psalm/phar": "^5.26"
     },
     "scripts": {
         "phpunit": "phpunit --colors=always",
-        "psalm": "psalm",
+        "psalm": "psalm.phar",
         "phpstan": "phpstan analyse src/ tests/ --no-progress --memory-limit=1G --level 8",
         "tests": [
             "@phpstan",
