@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog]
 and this project adheres to [Semantic Versioning].
 
+## 2.0.1 - 2024-10-03
+
+### Changed
+
+- Support for php ^7.1 || ^8.0
+
 ## 2.0.0 - 2024-09-13
 
 ### Changed
